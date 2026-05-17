@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hegemon Elite Recruitment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Orbitron', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#050505,#111,#1a0000);
+    color:white;
+    overflow-x:hidden;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.card{
+    width:100%;
+    max-width:1100px;
+    background:rgba(0,0,0,0.75);
+    border:2px solid #ff0000;
+    border-radius:25px;
+    padding:40px;
+    box-shadow:0 0 35px rgba(255,0,0,0.4);
+    backdrop-filter: blur(8px);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        box-shadow:0 0 20px rgba(255,0,0,0.3);
+    }
+    to{
+        box-shadow:0 0 50px rgba(255,0,0,0.7);
+    }
+}
+
+.logo{
+    text-align:center;
+    font-size:4rem;
+    font-weight:900;
+    color:#ff1e1e;
+    text-shadow:0 0 15px red;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    font-size:1.1rem;
+    color:#ccc;
+    margin-bottom:40px;
+}
+
+.section{
+    margin-bottom:35px;
+}
+
+.section h2{
+    color:#ff3b3b;
+    margin-bottom:15px;
+    font-size:1.6rem;
+    border-left:5px solid red;
+    padding-left:12px;
+}
+
+.requirements,
+.rules{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+.box{
+    background:#111;
+    border:1px solid #ff2d2d;
+    border-radius:15px;
+    padding:18px;
+    transition:0.3s;
+}
+
+.box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(255,0,0,0.5);
+}
+
+.box h3{
+    color:#ff5555;
+    margin-bottom:10px;
+}
+
+.box p{
+    color:#ddd;
+    line-height:1.5;
+    font-size:0.95rem;
+}
+
+.open{
+    text-align:center;
+    font-size:1.1rem;
+    color:#fff;
+    margin-top:10px;
+    line-height:1.8;
+}
+
+.contact{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+    margin-top:25px;
+}
+
+.contact a{
+    text-decoration:none;
+    color:white;
+    background:#b30000;
+    padding:14px 22px;
+    border-radius:12px;
+    transition:0.3s;
+    font-weight:bold;
+}
+
+.contact a:hover{
+    background:#ff0000;
+    transform:scale(1.05);
+}
+
+.footer{
+    margin-top:35px;
+    text-align:center;
+    color:#888;
+    font-size:0.9rem;
+}
+
+.particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+}
+
+.particles span{
+    position:absolute;
+    display:block;
+    width:4px;
+    height:4px;
+    background:red;
+    animation: animate 10s linear infinite;
+    opacity:0.5;
+}
+
+@keyframes animate{
+    0%{
+        transform:translateY(100vh) scale(0);
+    }
+    100%{
+        transform:translateY(-10vh) scale(1);
+    }
+}
+
+@media(max-width:768px){
+    .logo{
+        font-size:2.5rem;
+    }
+
+    .card{
+        padding:25px;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="particles"></div>
+
+<section class="hero">
+    <div class="card">
+
+        <div class="logo">HGMN</div>
+
+        <div class="subtitle">
+            HEGEMON ELITE • POKEMMO RECRUITMENT
+        </div>
+
+        <div class="section">
+            <h2>⚔ ABOUT THE TEAM</h2>
+
+            <p class="open">
+                Hegemon Elite (HGMN) is recruiting active and loyal members.
+                We are a competitive and community-driven PokeMMO team focused on
+                teamwork, alpha callouts, raids, grinding, events, and building a strong player community.
+                <br><br>
+                Newbies are welcome as long as you are active and willing to improve.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>🔥 REQUIREMENTS</h2>
+
+            <div class="requirements">
+
+                <div class="box">
+                    <h3>💬 Active Communication</h3>
+                    <p>
+                        Must be active in team/group chat and participate in discussions.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>📢 Alpha Callouts</h3>
+                    <p>
+                        Help the team by sharing alpha locations and important updates.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>⚔ Raid Participation</h3>
+                    <p>
+                        Join raids, events, and team activities whenever possible.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>⏱ 200 Hours Played</h3>
+                    <p>
+                        Applicants must have at least 200 hours total playtime in PokeMMO.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📜 TEAM RULES</h2>
+
+            <div class="rules">
+
+                <div class="box">
+                    <h3>🚫 No RMT</h3>
+                    <p>
+                        Real Money Trading (RMT) is strictly prohibited.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>🔒 No Borrowed Accounts</h3>
+                    <p>
+                        Using borrowed or shared accounts is not allowed.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>🤝 Respect Members</h3>
+                    <p>
+                        Toxic behavior, harassment, and unnecessary drama are not tolerated.
+                    </p>
+                </div>
+
+                <div class="box">
+                    <h3>⚡ Stay Active</h3>
+                    <p>
+                        Inactive players may be removed from the team.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📩 JOIN HGMN</h2>
+
+            <p class="open">
+                Interested in joining Hegemon Elite?
+                Contact us directly using the links below.
+            </p>
+
+            <div class="contact">
+                <a href="#">IGN: RySixSix (mail me)</a>
+
+                <a href="https://discord.com/users/1335583431047774240" target="_blank">
+                    Discord
+                </a>
+
+                <a href="https://web.facebook.com/raylexyzc" target="_blank">
+                    Facebook
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            Hegemon Elite (HGMN) © 2026 • Rise Above All
+        </div>
+
+    </div>
+</section>
+
+<script>
+const particles = document.querySelector('.particles');
+
+for(let i = 0; i < 80; i++){
+    const span = document.createElement('span');
+
+    span.style.left = Math.random() * window.innerWidth + 'px';
+    span.style.animationDuration = (Math.random() * 5 + 5) + 's';
+    span.style.animationDelay = Math.random() * 5 + 's';
+
+    particles.appendChild(span);
+}
+</script>
+
+</body>
+</html>
