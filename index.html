@@ -57,6 +57,7 @@ body{
     color:#ff1e1e;
     text-shadow:0 0 15px red;
     margin-bottom:10px;
+    letter-spacing:4px;
 }
 
 .subtitle{
@@ -91,6 +92,23 @@ body{
     border-radius:15px;
     padding:18px;
     transition:0.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.box::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(90deg,transparent,rgba(255,0,0,0.2),transparent);
+    transition:0.6s;
+}
+
+.box:hover::before{
+    left:100%;
 }
 
 .box:hover{
@@ -133,11 +151,13 @@ body{
     border-radius:12px;
     transition:0.3s;
     font-weight:bold;
+    border:1px solid #ff4444;
 }
 
 .contact a:hover{
     background:#ff0000;
     transform:scale(1.05);
+    box-shadow:0 0 20px rgba(255,0,0,0.6);
 }
 
 .footer{
@@ -161,6 +181,7 @@ body{
     width:4px;
     height:4px;
     background:red;
+    border-radius:50%;
     animation: animate 10s linear infinite;
     opacity:0.5;
 }
@@ -175,21 +196,46 @@ body{
 }
 
 @media(max-width:768px){
+
     .logo{
         font-size:2.5rem;
+    }
+
+    .subtitle{
+        font-size:0.95rem;
     }
 
     .card{
         padding:25px;
     }
+
+    .section h2{
+        font-size:1.3rem;
+    }
+
+    .open{
+        font-size:0.95rem;
+    }
+
+    .contact{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .contact a{
+        width:100%;
+        text-align:center;
+    }
 }
 </style>
 </head>
+
 <body>
 
 <div class="particles"></div>
 
 <section class="hero">
+
     <div class="card">
 
         <div class="logo">HGMN</div>
@@ -199,6 +245,7 @@ body{
         </div>
 
         <div class="section">
+
             <h2>⚔ ABOUT THE TEAM</h2>
 
             <p class="open">
@@ -208,9 +255,11 @@ body{
                 <br><br>
                 Newbies are welcome as long as you are active and willing to improve.
             </p>
+
         </div>
 
         <div class="section">
+
             <h2>🔥 REQUIREMENTS</h2>
 
             <div class="requirements">
@@ -244,9 +293,11 @@ body{
                 </div>
 
             </div>
+
         </div>
 
         <div class="section">
+
             <h2>📜 TEAM RULES</h2>
 
             <div class="rules">
@@ -266,6 +317,13 @@ body{
                 </div>
 
                 <div class="box">
+                    <h3>📵 No FB Account Dumping</h3>
+                    <p>
+                        Dumping, stealing, sharing, or selling Facebook accounts is strictly prohibited.
+                    </p>
+                </div>
+
+                <div class="box">
                     <h3>🤝 Respect Members</h3>
                     <p>
                         Toxic behavior, harassment, and unnecessary drama are not tolerated.
@@ -280,9 +338,11 @@ body{
                 </div>
 
             </div>
+
         </div>
 
         <div class="section">
+
             <h2>📩 JOIN HGMN</h2>
 
             <p class="open">
@@ -291,7 +351,10 @@ body{
             </p>
 
             <div class="contact">
-                <a href="#">IGN: RySixSix (mail me)</a>
+
+                <a href="#">
+                    IGN: RySixSix (mail me)
+                </a>
 
                 <a href="https://discord.com/users/1335583431047774240" target="_blank">
                     Discord
@@ -300,7 +363,9 @@ body{
                 <a href="https://web.facebook.com/raylexyzc" target="_blank">
                     Facebook
                 </a>
+
             </div>
+
         </div>
 
         <div class="footer">
@@ -308,16 +373,20 @@ body{
         </div>
 
     </div>
+
 </section>
 
 <script>
 const particles = document.querySelector('.particles');
 
 for(let i = 0; i < 80; i++){
+
     const span = document.createElement('span');
 
     span.style.left = Math.random() * window.innerWidth + 'px';
+
     span.style.animationDuration = (Math.random() * 5 + 5) + 's';
+
     span.style.animationDelay = Math.random() * 5 + 's';
 
     particles.appendChild(span);
